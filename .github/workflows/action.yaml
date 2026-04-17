@@ -1,5 +1,3 @@
-name: Checkov SCA Scanning
-
 # 1. The "on" property defines what triggers the workflow
 on:
   push:
@@ -19,5 +17,5 @@ jobs:
         env:
           PRISMA_API_URL: ${{ secrets.PRISMA_API_URL }}
         with:
-          framework: terraform
+          framework: sca_package
           api-key: ${{ secrets.BC_API_KEY }}
