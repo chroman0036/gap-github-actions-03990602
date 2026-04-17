@@ -18,5 +18,6 @@ jobs:
           PRISMA_API_URL: https://api2.prismacloud.io
         with:
           output_format: cli
+          framework: sca_package
           api-key: 4dca0ab1-7cb7-4932-b89f-bc00499bd84a::D6ZDtgNETWPqjamJu3X7dmCowuU=
           log_level: DEBUG
