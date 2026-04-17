@@ -1,10 +1,22 @@
-steps:
-  - name: Checkout repo
-    uses: actions/checkout@v2
-  - name: Run Prisma Cloud
-    id: prisma-cloud
-    uses: bridgecrewio/checkov-action@master
-    env:
-      PRISMA_API_URL: 'https://api2.prismacloud.io'
-    with:
-      api-key: '${{ secrets.BC_API_KEY }}'
+name: Run Checkov SCA Scanning
+
+# 1. The "on" property defines what triggers the workflow
+on:
+  push:
+    branches: [ main ]
+
+# 2. The "jobs" property contains the execution logic
+jobs:
+  prisma_scan_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Run Prisma Cloud
+        id: prisma-cloud
+        uses: bridgecrewio/checkov-action@master
+        env:
+          PRISMA_API_URL: 'https://api2.prismacloud.io'
+        with:
+          api-key: ${{ secrets.BC_API_KEY }}
