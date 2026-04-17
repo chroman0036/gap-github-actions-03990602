@@ -19,5 +19,5 @@ jobs:
         env:
           PRISMA_API_URL: ${{ secrets.PRISMA_API_URL }}
         with:
-          framework: sca_package
+          framework: terraform
           api-key: ${{ secrets.BC_API_KEY }}
