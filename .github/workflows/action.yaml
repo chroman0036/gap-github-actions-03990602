@@ -21,5 +21,4 @@ jobs:
           api-key: ${{ env.BC_API_KEY }}
           output_format: cli
           framework: sca_package
-          api-key: ${{ secrets.BC_API_KEY }}
           log_level: DEBUG
