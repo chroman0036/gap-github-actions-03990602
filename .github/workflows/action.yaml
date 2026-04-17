@@ -15,7 +15,7 @@ jobs:
         id: checkov
         uses: bridgecrewio/checkov-action@master
         env:
-          env_var: ${{ secrets.PRISMA_API_URL}}
+          PRISMA_API_URL: ${{ vars.PRISMA_API_URL}}
         with:
           api-key: ${{ secrets.BC_API_KEY }}
           output_format: cli
