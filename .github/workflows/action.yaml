@@ -1,4 +1,4 @@
-# 1. The "on" property defines what triggers the workflow
+## 1. The "on" property defines what triggers the workflow
 on:
   push:
     branches: [ main ]
