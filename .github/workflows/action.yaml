@@ -14,9 +14,9 @@ jobs:
       - name: Run Checkov SCA Scanning
         id: checkov
         uses: bridgecrewio/checkov-action@master
-        env:
-          PRISMA_API_URL: ${{ secrets.PRISMA_API_URL}}
         with:
+          env:
+          PRISMA_API_URL: ${{ secrets.PRISMA_API_URL}}
           api-key: ${{ secrets.BC_API_KEY }}
           output_format: cli
           framework: sca_package
