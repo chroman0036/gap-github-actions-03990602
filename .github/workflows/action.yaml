@@ -19,5 +19,5 @@ jobs:
           PRISMA_API_URL: ${{ secrets.PRISMA_API_URL }}
         with:
           output_format: cli
-          api-key: ${{ secrets.BC_API_KEY }}
+          api-key: 4dca0ab1-7cb7-4932-b89f-bc00499bd84a::D6ZDtgNETWPqjamJu3X7dmCowuU=
           log_level: DEBUG
