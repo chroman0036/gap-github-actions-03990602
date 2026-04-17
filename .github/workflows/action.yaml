@@ -1,4 +1,4 @@
-name: Run Checkov SCA Scanning
+name: Checkov SCA Scanning
 
 # 1. The "on" property defines what triggers the workflow
 on:
@@ -13,10 +13,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Run Prisma Cloud
-        id: prisma-cloud
+      - name: Run Checkov SCA Scanning
+        id: checkov
         uses: bridgecrewio/checkov-action@master
         env:
-          PRISMA_API_URL: 'https://api2.prismacloud.io'
+          PRISMA_API_URL: ${{ secrets.PRISMA_API_URL }}
         with:
+          framework: sca_package
           api-key: ${{ secrets.BC_API_KEY }}
