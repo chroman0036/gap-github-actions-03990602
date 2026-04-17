@@ -17,5 +17,6 @@ jobs:
         env:
           PRISMA_API_URL: ${{ secrets.PRISMA_API_URL }}
         with:
-          framework: sca_package
+          output_format: cli
           api-key: ${{ secrets.BC_API_KEY }}
+          log_level: DEBUG
